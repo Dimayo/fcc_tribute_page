@@ -1,0 +1,283 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+@import url("https://fonts.googleapis.com/css?family=Muli");
+
+#main {
+    margin: 0 auto;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+#title {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    color: #ff4769;
+    font-size: 80px;
+    font-family: "Muli", sans-serif;
+    text-shadow: -4px 4px hsla(0, 0%, 70%, 0.4), -3px 3px hsla(0, 0%, 60%, 0.2),
+    -2px 2px hsla(0, 0%, 70%, 0.2), -1px 1px hsla(0, 0%, 70%, 0.2),
+    0 0 hsla(0, 0%, 50%, 0.5), 1px -1px hsla(0, 0%, 30%, 0.6),
+    2px -2px hsla(0, 0%, 30%, 0.7), 3px -3px hsla(0, 0%, 32%, 0.8),
+    4px -4px hsla(0, 0%, 30%, 0.9), 5px -5px hsla(0, 0%, 30%, 1);
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -25px;
+    width: 50px;
+    height: 30px;
+    border-top: 5px solid #ff4769;
+    border-left: 5px solid #ff4769;
+}
+
+#title::after {
+    content: "";
+    position: absolute;
+    bottom: -10%;
+    right: -25px;
+    width: 50px;
+    height: 30px;
+    border-bottom: 5px solid #ff4769;
+    border-right: 5px solid #ff4769;
+}
+
+#img-div {
+    margin-top: 20px;
+    width: 100%;
+    background: white;
+}
+
+#image {
+    max-width:95%;
+    display: block;
+    height: auto;
+    margin: auto;
+    border-color: grey;
+    border-style: solid;
+    border-width: 6px;
+}
+#img-caption {
+    font-family: "Muli", sans-serif;
+    font-size: 16px;
+    color: #666666;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    margin-top: 55px;
+    margin-bottom: 65px;
+    font-size: 60px;
+    line-height: 48px;
+    text-align: center;
+    color: #ff4769;
+    font-family: "Muli", sans-serif;
+}
+
+#tribute-info {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h2::before,
+h2::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #ff4769;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+h2::before {
+    margin-right: 25px;
+}
+
+h2::after {
+    margin-left: 25px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-weight: normal;
+    font-family: "Muli", sans-serif;
+    text-align: justify;
+    padding: 0 50px;
+    color: #666666;
+}
+
+blockquote {
+    font-size: 20px;
+    display: block;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding: 40px;
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-top-color: grey;
+    font-family: "Muli", sans-serif;
+    text-align: justify;
+    background: #f5f7f8;
+    position: relative;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    color: #666666;
+    max-width: 800px;
+}
+
+blockquote span {
+    position: absolute;
+    top: -15px;
+    right: 24px;
+    font-size: 90px;
+    font-weight: 700;
+    color: #ff4769;
+    opacity: 0.2;
+    z-index: 1;
+    font-family: "Muli", sans-serif;
+}
+
+blockquote:hover,
+blockquote:focus {
+    transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-box-shadow: 0 0 0 0 #7f7d7e;
+    -moz-box-shadow: 0 0 0 0 #7f7d7e;
+    box-shadow: 0 0 0 0 #7f7d7e;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.steps {
+    position: relative;
+}
+
+.steps:before {
+    top: 10px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 1px;
+    background-color: #f8f8f8;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: space-around;
+    border-right-style: solid;
+    border-right-color: #f8f8f8;
+    border-right-width: 1px;
+    border-left-style: solid;
+    border-left-color: #f8f8f8;
+    border-left-width: 1px;
+}
+
+.timeline .timeline-box {
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 400px;
+    display: block;
+    background: #f5f7f8;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-top-color: grey;
+    transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    font-family: "Muli", sans-serif;
+}
+
+.timeline .timeline-details {
+    color: #666666;
+    font-family: "Muli", sans-serif;
+    text-align: justify;
+}
+
+.timeline .timeline-box span {
+    position: absolute;
+    top: -15px;
+    right: 24px;
+    font-size: 90px;
+    font-weight: 700;
+    color: #ff4769;
+    opacity: 0.2;
+    font-family: "Muli", sans-serif;
+}
+
+.timeline-box:hover,
+.timeline-box:focus {
+    transform: translate(0, -5px);
+    -webkit-transform: translate(0, -5px);
+    -ms-transform: translate(0, -5px);
+    -webkit-box-shadow: 0 0 0 0 #7f7d7e;
+    -moz-box-shadow: 0 0 0 0 #7f7d7e;
+    box-shadow: 0 0 0 0 #7f7d7e;
+}
+
+.footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+a {
+    color: #666666;
+}
+
+@media (max-width: 615px) {
+    #title {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #title:before {
+        display: none;
+    }
+    #title:after {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    #title{
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        padding: 0 15px;
+    }
+
+    blockquote {
+        padding: 20px;
+    }
+}
