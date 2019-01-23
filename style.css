@@ -325,7 +325,7 @@ a {
     }
 
     .timeline .timeline-box {
-        max-width: 350px;
+        width: auto;
         height: auto;
     }
 }
