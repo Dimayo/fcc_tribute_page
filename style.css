@@ -323,4 +323,9 @@ a {
     blockquote {
         padding: 20px;
     }
+
+    .timeline .timeline-box {
+        max-width: 350px;
+        height: auto;
+    }
 }
