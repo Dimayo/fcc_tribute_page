@@ -1,34 +1,106 @@
-@import "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
 @import url("https://fonts.googleapis.com/css?family=Muli");
 
-#main {
-    margin: 0 auto;
+html {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    font-family: "Muli", sans-serif;
+    margin: 0;
     padding: 0;
 }
 
+
 header {
-    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    transform-style: inherit;
+    z-index: -1;
 }
 
-#title {
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(images/1.jpg) top center;
+    background-size: cover;
+    transform: translateZ(-1px) scale(2.1);
+    min-height: 100%;
+    z-index: -2;
+}
+
+section {
     position: relative;
-    display: inline-block;
-    width: auto;
+    width: 100%;
+    position: relative;
+    transform-style: inherit;
+}
+
+.second-image {
+    min-height: 100vh;
+}
+
+
+.article {
+    background: #fafafa;
+    box-shadow: 0 0 20px #333;
+    z-index: 1;
+}
+
+.article-wrapper {
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    padding: 30px 0 50px 0;
+}
+
+.second-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(images/2.jpg) top center;
+    background-size: cover;
+    transform: translateZ(-.5px) scale(1.6);
+    z-index: -1;
+}
+
+
+.title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateZ(-1px) scale(2) translate(-25%, -25%);
+    display: inline-block;
     letter-spacing: 2px;
     color: #ff4769;
-    font-size: 80px;
+    font-size: 110px;
     font-family: "Muli", sans-serif;
     text-shadow: -4px 4px hsla(0, 0%, 70%, 0.4), -3px 3px hsla(0, 0%, 60%, 0.2),
-    -2px 2px hsla(0, 0%, 70%, 0.2), -1px 1px hsla(0, 0%, 70%, 0.2),
-    0 0 hsla(0, 0%, 50%, 0.5), 1px -1px hsla(0, 0%, 30%, 0.6),
-    2px -2px hsla(0, 0%, 30%, 0.7), 3px -3px hsla(0, 0%, 32%, 0.8),
-    4px -4px hsla(0, 0%, 30%, 0.9), 5px -5px hsla(0, 0%, 30%, 1);
+        -2px 2px hsla(0, 0%, 70%, 0.2), -1px 1px hsla(0, 0%, 70%, 0.2),
+        0 0 hsla(0, 0%, 50%, 0.5), 1px -1px hsla(0, 0%, 30%, 0.6),
+        2px -2px hsla(0, 0%, 30%, 0.7), 3px -3px hsla(0, 0%, 32%, 0.8),
+        4px -4px hsla(0, 0%, 30%, 0.9), 5px -5px hsla(0, 0%, 30%, 1);
 }
 
-#title::before {
+.title::before {
     content: "";
     position: absolute;
     top: -10%;
@@ -39,7 +111,7 @@ header {
     border-left: 5px solid #ff4769;
 }
 
-#title::after {
+.title::after {
     content: "";
     position: absolute;
     bottom: -10%;
@@ -50,28 +122,8 @@ header {
     border-right: 5px solid #ff4769;
 }
 
-#img-div {
-    margin-top: 20px;
-    width: 100%;
-    background: white;
-}
-
-#image {
-    max-width:95%;
-    display: block;
-    height: auto;
-    margin: auto;
-    border-color: grey;
-    border-style: solid;
-    border-width: 6px;
-}
-#img-caption {
-    font-family: "Muli", sans-serif;
-    font-size: 16px;
-    color: #666666;
-}
-
 h2 {
+
     display: flex;
     align-items: center;
     margin-top: 55px;
@@ -83,11 +135,8 @@ h2 {
     font-family: "Muli", sans-serif;
 }
 
-#tribute-info {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0;
-}
+
+
 
 h2::before,
 h2::after {
@@ -109,32 +158,29 @@ h2::after {
 
 p {
     font-size: 20px;
-    margin-bottom: 50px;
     font-weight: normal;
     font-family: "Muli", sans-serif;
     text-align: justify;
-    padding: 0 50px;
     color: #666666;
+    margin: 3%;
 }
 
 blockquote {
     font-size: 20px;
     display: block;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.7s cubic-bezier(.25, .8, .25, 1);
     margin: 0 auto;
-    margin-bottom: 50px;
-    padding: 40px;
-    border-top-style: solid;
-    border-top-width: 4px;
-    border-top-color: grey;
+    margin-bottom: 20px;
+    padding: 3%;
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color: grey;
     font-family: "Muli", sans-serif;
     text-align: justify;
-    background: #f5f7f8;
+    background: #ffffff;
     position: relative;
-    transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
     color: #666666;
     max-width: 800px;
 }
@@ -146,24 +192,16 @@ blockquote span {
     font-size: 90px;
     font-weight: 700;
     color: #ff4769;
-    opacity: 0.2;
+    opacity: 0.15;
     z-index: 1;
     font-family: "Muli", sans-serif;
 }
 
 blockquote:hover,
 blockquote:focus {
-    transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    -ms-transform: translate(0, -5px);
-    -webkit-box-shadow: 0 0 0 0 #7f7d7e;
-    -moz-box-shadow: 0 0 0 0 #7f7d7e;
-    box-shadow: 0 0 0 0 #7f7d7e;
-}
-
-main {
-    max-width: 1000px;
-    margin: 0 auto;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+        transform: translateY(-2px);
 }
 
 .steps {
@@ -200,18 +238,19 @@ main {
 .timeline .timeline-box {
     position: relative;
     margin-bottom: 30px;
-    max-width: 400px;
-    display: block;
-    background: #f5f7f8;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border-top-style: solid;
-    border-top-width: 4px;
-    border-top-color: grey;
-    transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.7s cubic-bezier(.25, .8, .25, 1);
+    border-left-style: solid;
+    border-left-width: 4px;
+    border-left-color: grey;
     font-family: "Muli", sans-serif;
+    width: 350px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
 }
 
 .timeline .timeline-details {
@@ -227,23 +266,21 @@ main {
     font-size: 90px;
     font-weight: 700;
     color: #ff4769;
-    opacity: 0.2;
+    opacity: 0.15;
     font-family: "Muli", sans-serif;
 }
 
 .timeline-box:hover,
 .timeline-box:focus {
-    transform: translate(0, -5px);
-    -webkit-transform: translate(0, -5px);
-    -ms-transform: translate(0, -5px);
-    -webkit-box-shadow: 0 0 0 0 #7f7d7e;
-    -moz-box-shadow: 0 0 0 0 #7f7d7e;
-    box-shadow: 0 0 0 0 #7f7d7e;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
 }
 
 .footer {
     margin: 0 auto;
     text-align: center;
+    padding: 30px 5%;
 }
 
 a {
@@ -259,6 +296,7 @@ a {
     #title:before {
         display: none;
     }
+
     #title:after {
         display: none;
     }
@@ -266,13 +304,14 @@ a {
 
 @media (max-width: 500px) {
 
-    #title{
+    #title {
         font-size: 60px;
     }
 
     h2 {
         font-size: 40px;
     }
+
     p {
         padding: 0 15px;
     }
