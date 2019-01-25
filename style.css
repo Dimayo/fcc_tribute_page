@@ -61,25 +61,10 @@ section {
 }
 
 .article-wrapper {
-    max-width: 1150px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 30px 0 50px 0;
+    padding: 0;
 }
-
-.second-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: url(images/2.jpg) top center;
-    background-size: cover;
-    transform: translateZ(-.5px) scale(1.6);
-    z-index: -1;
-}
-
 
 .title {
     text-align: center;
@@ -125,8 +110,8 @@ h2 {
 
     display: flex;
     align-items: center;
-    margin-top: 55px;
-    margin-bottom: 65px;
+    margin: 0;
+    padding: 70px 0 50px 0;
     font-size: 60px;
     line-height: 48px;
     text-align: center;
@@ -155,24 +140,23 @@ h2::after {
     margin-left: 25px;
 }
 
-p {
-    font-size: 20px;
+.article-text {
+    font-size: 18px;
     font-weight: normal;
-    font-family: "Muli", sans-serif;
     text-align: justify;
     color: #666666;
-    margin: 3%;
+    margin: 0;
+    padding: 0 3% 30px 3%;
 }
 
 blockquote {
-    font-size: 20px;
+    font-size: 18px;
     display: block;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.7s cubic-bezier(.25, .8, .25, 1);
     margin: 0 auto;
     padding: 3%;
-    margin-bottom: 30px;
     border-left-style: solid;
     border-left-width: 4px;
     border-left-color: grey;
@@ -200,11 +184,11 @@ blockquote:hover,
 blockquote:focus {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
-        transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .timeline {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0;
@@ -219,7 +203,7 @@ blockquote:focus {
     border-left-width: 1px;
 }
 
-.timeline .timeline-box {
+.timeline-box {
     position: relative;
     margin-bottom: 50px;
     display: flex;
@@ -230,24 +214,27 @@ blockquote:focus {
     border-left-style: solid;
     border-left-width: 4px;
     border-left-color: grey;
-    font-family: "Muli", sans-serif;
-    width: 350px;
-    height: 250px;
+    width: 315px;
+    height: 215px;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 
-.timeline .timeline-details {
+.timeline-details {
     color: #666666;
     font-family: "Muli", sans-serif;
     text-align: justify;
+    font-size: 18px;
+    margin: 0;
+    padding: 2% 5%;
 }
 
-.timeline .timeline-box span {
+.timeline-box span {
     position: absolute;
-    top: -15px;
+    top: -8px;
     right: 24px;
-    font-size: 90px;
+    font-size: 70px;
     font-weight: 700;
     color: #ff4769;
     opacity: 0.15;
@@ -264,7 +251,7 @@ blockquote:focus {
 .footer {
     margin: 0 auto;
     text-align: center;
-    padding: 30px 5%;
+    padding: 20px 5%;
 }
 
 a {
