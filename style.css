@@ -162,7 +162,7 @@ h2 {
     color: #666666;
     margin: 0;
     padding: 0 3% 20px 3%;
-
+    background-color: white;
 }
 
 blockquote {
@@ -173,6 +173,7 @@ blockquote {
     font-family: "Muli", sans-serif;
     position: relative;
     color: #666666;
+    background-color: white;
 }
 
 blockquote span {
@@ -319,4 +320,9 @@ a {
         width: auto;
         height: auto;
     }
+
+    .intro-img {
+        display: none;
+    }
+
 }
