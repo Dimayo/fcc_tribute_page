@@ -36,7 +36,7 @@ header::before {
     right: 0;
     bottom: 0;
     display: block;
-    background: url(images/1.jpg) top center;
+    background: url(images/main.jpg) top center;
     background-size: cover;
     transform: translateZ(-2px) scale(3.1);
     min-height: 100%;
@@ -51,16 +51,14 @@ section {
 }
 
 .article {
-    background: #ffffff;
+    background: #f0f0f0;
     box-shadow: 0 0 20px #333;
     z-index: 1;
 }
 
 .article-wrapper {
-    max-width: 1200px;
     margin: 0 auto;
-    padding: 0;
-
+    padding: 0 0 90px 0;
 }
 
 .title {
@@ -74,11 +72,8 @@ section {
     color: #ff4769;
     font-size: 110px;
     font-family: "Muli", sans-serif;
-    text-shadow: -4px 4px hsla(0, 0%, 70%, 0.4), -3px 3px hsla(0, 0%, 60%, 0.2),
-        -2px 2px hsla(0, 0%, 70%, 0.2), -1px 1px hsla(0, 0%, 70%, 0.2),
-        0 0 hsla(0, 0%, 50%, 0.5), 1px -1px hsla(0, 0%, 30%, 0.6),
-        2px -2px hsla(0, 0%, 30%, 0.7), 3px -3px hsla(0, 0%, 32%, 0.8),
-        4px -4px hsla(0, 0%, 30%, 0.9), 5px -5px hsla(0, 0%, 30%, 1);
+    text-shadow: 0 13.36px 8.896px #808080,
+        0 -2px 1px #fff;
 }
 
 .title::before {
@@ -116,38 +111,65 @@ h2 {
 
 .intro-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    max-width: 930px;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 3% 0 3%;
+    max-width: 1000px;
+}
+
+.img-wrapper {
+    padding: 25px 25px 20px 25px;
+    background-color: white;
+    filter: grayscale(100%);
+    transform: rotate(-1deg) scale(1.03);
+    transition: 300ms;
+    margin: 0 30px 0 0;
+}
+
+.img-wrapper:hover {
+    filter: grayscale(10%);
+    transform: rotate(0deg);
 }
 
 .intro-img {
-    position: absolute;
-    height: 350px;
-    bottom: 20px;
-    right: -230px;
-    z-index: -1;
+    width: 300px;
+    height: auto;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.img-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: #3f3f3f;
 }
 
 .article-text {
     font-size: 18px;
-    color: #666666;
+    color: #000000;
     margin: 0;
-    padding: 0 3% 20px 3%;
+    padding: 0 0 20px 0;
+    text-align: justify;
+}
+
+.article-highlight {
+    color: #ff4769;
+    font-weight: bold;
 }
 
 blockquote {
     font-size: 18px;
     display: block;
     margin: 0 auto;
-    padding: 3%;
+    padding: 0;
     font-family: "Muli", sans-serif;
     position: relative;
-    color: #666666;
+    color: #000000;
+    font-weight: 500;
+    text-align: justify;
 }
 
 blockquote span {
@@ -162,54 +184,75 @@ blockquote span {
     font-family: "Muli", sans-serif;
 }
 
+.timeline-wrapper {
+    margin: 0 auto;
+    padding: 20px 0 50px 0;
+    background-image: linear-gradient(to right top, #f0f0f0, #f4f4f4, #f7f7f7, #fbfbfb, #ffffff);
+}
+
 .timeline {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     list-style: none;
-    justify-content: space-around;
-    background-image: url(images/3.svg);
+    justify-content: center;
     background-size: cover;
-
+    max-width: 1200px;
 }
 
 .timeline-box {
-    position: relative;
-    margin-bottom: 50px;
+    margin: 0 2% 30px 2%;
     display: flex;
     background: #ffffff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
         0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.7s cubic-bezier(.25, .8, .25, 1);
-    border-left-style: solid;
-    border-left-width: 4px;
-    border-left-color: grey;
-    width: 315px;
-    height: 215px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    border-radius: 4px;
+    flex-direction: column;
+    max-width: 320px;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.timeline-header {
+    position: relative;
+    height: 175px;
+    width: 100%;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px 4px 0 0;
+}
+
+.timeline-title {
+    background: #ffffff9d;
+    padding: 3.5% 0 2.5% 0;
+    color: #ff4769;
+    position: absolute;
+    top: 132px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
 }
 
 .timeline-details {
-    color: #666666;
+    color: #000000;
     font-family: "Muli", sans-serif;
     text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
-    padding: 2% 5%;
-}
-
-.timeline-box span {
-    position: absolute;
-    top: -8px;
-    right: 24px;
-    font-size: 70px;
-    font-weight: 700;
-    color: #ff4769;
-    opacity: 0.15;
-    font-family: "Muli", sans-serif;
+    padding: 5%;
 }
 
 .timeline-box:hover,
@@ -217,49 +260,51 @@ blockquote span {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
         0 10px 10px rgba(0, 0, 0, 0.22);
     transform: translateY(-2px);
+    filter: grayscale(10%);
 }
 
-.footer {
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 5%;
+.wikipedia-icon {
+    display: block;
+    margin:0 auto;
 }
 
-a {
-    color: #666666;
-}
-
-@media (max-width: 970px) {
-    .intro-img {
-        display: none;
-    }
+@media (max-width: 880px) {
 
     .intro-container {
-        justify-content: center;
+        flex-direction: column;
     }
 
-    .article-text {
-        text-align: justify;
-    }
-
-    blockquote {
-        text-align: justify;
+    .img-wrapper {
+        margin: 0 0 50px 0;
     }
 }
 
 @media (max-width: 500px) {
-
 
     h2 {
         font-size: 30px;
     }
 
     .title {
-        font-size: 90px;
+        font-size: 80px;
     }
 
-    .timeline .timeline-box {
-        width: auto;
-        height: 215px;
+    .title::before {
+        top: -5%;
+        left: -15px;
+        width: 36px;
+        height: 22px;
+    }
+
+    .title::after {
+        bottom: -5%;
+        right: -15px;
+        width: 36px;
+        height: 22px;
+    }
+
+    .timeline-box {
+        margin: 0 0 30px 0;
+        flex-shrink: 0;
     }
 }
