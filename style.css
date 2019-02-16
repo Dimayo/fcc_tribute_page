@@ -174,8 +174,8 @@ blockquote {
 
 blockquote span {
     position: absolute;
-    top: -15px;
-    right: 24px;
+    top: -50px;
+    right: 5px;
     font-size: 90px;
     font-weight: 700;
     color: #ff4769;
