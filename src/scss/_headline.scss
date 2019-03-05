@@ -1,0 +1,12 @@
+.headline {
+    font-size: 30px;
+    margin: 0;
+    padding: 60px 0 40px 0;
+    line-height: 48px;
+    text-align: center;
+    color: $main-color;
+
+    @media (min-width: 500px) {
+        font-size: 40px;
+    }
+}

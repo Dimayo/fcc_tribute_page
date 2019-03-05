@@ -1,0 +1,9 @@
+.body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    font-family: $font;
+    margin: 0;
+}

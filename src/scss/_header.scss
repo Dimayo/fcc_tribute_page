@@ -1,0 +1,99 @@
+.header {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    transform-style: inherit;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background: url(images/main.jpg) top center;
+        background-size: cover;
+        transform: translateZ(-2px) scale(3.1);
+        height: 100vh;
+        z-index: -2;
+    }
+
+    &__title {
+        text-align: center;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translateZ(-1px) scale(2) translate(-25%, -25%);
+        display: inline-block;
+        letter-spacing: 2px;
+        color: $main-color;
+        font-size: 80px;
+        font-family: $font;
+
+        @media (min-width: 500px) {
+            font-size: 110px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            border-top: 5px solid $main-color;
+            border-left: 5px solid $main-color;
+            top: -5%;
+            left: -15px;
+            width: 36px;
+            height: 22px;
+
+            @media (min-width: 500px) {
+                top: -10%;
+                left: -25px;
+                width: 50px;
+                height: 30px;
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            border-bottom: 5px solid $main-color;
+            border-right: 5px solid $main-color;
+            bottom: -5%;
+            right: -15px;
+            width: 36px;
+            height: 22px;
+
+            @media (min-width: 500px) {
+                bottom: -10%;
+                right: -25px;
+                width: 50px;
+                height: 30px;
+            }
+        }
+    }
+
+    &__nav-link {
+        position: absolute;
+        bottom: 10px;
+        width: 100px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin: auto;
+        left: 37%;
+
+        @media (min-width: 500px) {
+            left: 44%;
+        }
+
+        @media (min-width: 880px) {
+            left: 47%;
+        }
+
+
+    }
+}

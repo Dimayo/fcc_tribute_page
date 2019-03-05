@@ -1,0 +1,28 @@
+.main {
+    background: #f0f0f0;
+    box-shadow: 0 0 20px #333;
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    position: relative;
+    transform-style: inherit;
+
+    &__inner {
+        margin: auto;
+        padding: 0 0 90px 0;
+    }
+
+    &__intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 0 3% 0 3%;
+        max-width: 1000px;
+        flex-direction: column;
+
+        @media (min-width: 880px) {
+            flex-direction: row;
+        }
+    }
+}
